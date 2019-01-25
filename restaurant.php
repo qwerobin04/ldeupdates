@@ -27,9 +27,9 @@
                 alt="Nav Button Close" /> </div>
             <nav>
               <ul>
-                <li><a href="landing-page.php">Home</a></li>
-                <li><a href="restaurant.php">Restaurants</a></li>
-                <li><a href="about.php">About</a></li>
+                <li><a href="./landing-page.php">Home</a></li>
+                <li><a href="./restaurant.php">Restaurants</a></li>
+                <li><a href="./about.php">About</a></li>
               </ul>
             </nav>
           </div>
@@ -49,7 +49,7 @@
   <div class="resto-container">
     <div class="resto-section">
       <div class="resto-img">
-        <a href="categories.php"><img src="images-landing/caramel-logo.png" alt=""></a>
+        <a href="./categories.php"><img src="images-landing/caramel-logo.png" alt=""></a>
         <p>Caramel</p>
       </div> <!-- /.resto-img -->
       <div class="resto-img">

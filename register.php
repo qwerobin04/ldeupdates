@@ -77,7 +77,7 @@
         </div>
         <div class="hpanel">
           <div class="panel-body">
-            <form action="insert.php" method="post" id="loginForm">
+            <form action="./php/insert.php" method="post" id="loginForm">
               <div class="row">
                 <div class="form-group col-lg-12">
                   <label>Full Name</label>

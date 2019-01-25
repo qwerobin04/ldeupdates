@@ -27,9 +27,9 @@
                 alt="Nav Button Close" /> </div>
             <nav>
               <ul>
-                <li><a href="landing-page.php">Home</a></li>
-                <li><a href="restaurant.php">Restaurants</a></li>
-                <li><a href="about.php">About</a></li>
+                <li><a href="./landing-page.php">Home</a></li>
+                <li><a href="./restaurant.php">Restaurants</a></li>
+                <li><a href="./about.php">About</a></li>
               </ul>
             </nav>
           </div>

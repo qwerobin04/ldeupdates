@@ -1,20 +1,7 @@
-<?php
-$conn = mysqli_connect("localhost", "root", "", "lde");
-	$sql =  "SELECT * FROM cartadded ORDER BY ID ASC";
-	$run = mysqli_query($conn,$sql);
-?>
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
+<!doctype html>
+<html class="no-js" lang="en">
 
 <head>
-
-			 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
-			 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
-			 <script src="https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js"></script>
-			 <script src="https://cdn.datatables.net/1.10.12/js/dataTables.bootstrap.min.js"></script>
-			 <link rel="stylesheet" href="https://cdn.datatables.net/1.10.12/css/dataTables.bootstrap.min.css" />
-
-
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   <title>Lokal Dashboard</title>
@@ -78,27 +65,25 @@ $conn = mysqli_connect("localhost", "root", "", "lde");
   <div class="left-sidebar-pro">
     <nav id="sidebar" class="">
       <div class="sidebar-header">
-        <a href="./index1.php"><img class="main-logo" src="" alt="" /></a>
+        <a href="index.php"><img class="main-logo" src="" alt="" /></a>
         <strong><img src="" alt="" /></strong>
       </div>
       <div class="left-custom-menu-adp-wrap comment-scrollbar">
         <nav class="sidebar-nav left-sidebar-menu-pro">
           <ul class="metismenu" id="menu1">
             <li class="active">
-              <a class="has-arrow" href="./index1.php">
+              <a class="has-arrow" href="index.php">
                 <i class="fa big-icon fa-home icon-wrap"></i>
                 <span class="mini-click-non">Main</span>
               </a>
               <ul class="submenu-angle" aria-expanded="true">
-                <li><a title="Dashboard v.1" href="./index1.php"><i class="fa fa-bullseye sub-icon-mg" aria-hidden="true"></i> <span class="mini-sub-pro">Dashboard</span></a></li>
-                <li><a title="Order List" href="./orders.php"><i class="fa fa-female sub-icon-mg" aria-hidden="true"></i> <span class="mini-sub-pro">Orders</span></a></li>
-                <li><a title="Business List" href="./business.php"><i class="fa fa-bolt sub-icon-mg" aria-hidden="true"></i> <span class="mini-sub-pro">Business</span></a></li>
-                <li><a title="Account List" href="./accounts.php"><i class="fa fa-line-chart sub-icon-mg" aria-hidden="true"></i> <span class="mini-sub-pro">Accounts</span></a></li>
-                <li><a title="Menu List" href="./menu.php"><i class="fa fa-diamond sub-icon-mg" aria-hidden="true"></i> <span class="mini-sub-pro">Menu</span></a></li>
-                <li><a title="Food List" href="./food.php"><i class="fa fa-heart sub-icon-mg" aria-hidden="true"></i> <span class="mini-sub-pro">Food</span></a></li>
+                <li><a title="Dashboard v.1" href="index.php"><i class="fa fa-bullseye sub-icon-mg" aria-hidden="true"></i> <span class="mini-sub-pro">Dashboard</span></a></li>
+                <li><a title="Order List" href="orders.php"><i class="fa fa-female sub-icon-mg" aria-hidden="true"></i> <span class="mini-sub-pro">Orders</span></a></li>
+                <!-- <li><a title="Menu List" href="menu.php"><i class="fa fa-diamond sub-icon-mg" aria-hidden="true"></i> <span class="mini-sub-pro">Menu</span></a></li> -->
+                <li><a title="Category List" href="food.php"><i class="fa fa-heart sub-icon-mg" aria-hidden="true"></i> <span class="mini-sub-pro">Food</span></a></li>
               </ul>
             </li>
-            <li><a title="Landing Page" href="./landing-page.php" aria-expanded="false" target="_blank"><i class="fa fa-bookmark icon-wrap sub-icon-mg" aria-hidden="true"></i> <span class="mini-click-non">Landing Page</span></a></li>
+            <li><a title="Landing Page" href="landing-page.php" aria-expanded="false" target="_blank"><i class="fa fa-bookmark icon-wrap sub-icon-mg" aria-hidden="true"></i> <span class="mini-click-non">Landing Page</span></a></li>
           </ul>
         </nav>
       </div>
@@ -110,7 +95,7 @@ $conn = mysqli_connect("localhost", "root", "", "lde");
       <div class="row">
         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
           <div class="logo-pro">
-            <a href="./index1.php"><img class="main-logo" src="" alt="" /></a>
+            <a href="index.php"><img class="main-logo" src="" alt="" /></a>
           </div>
         </div>
       </div>
@@ -131,7 +116,7 @@ $conn = mysqli_connect("localhost", "root", "", "lde");
                   </div>
                   <div class="col-lg-6 col-md-7 col-sm-6 col-xs-12">
                     <div class="header-top-menu tabl-d-n">
-                      <h2>Lokal Delivery Express</h2>
+                      <h2>Partner's Dashboard</h2>
                     </div>
                   </div>
                   <div class="col-lg-5 col-md-5 col-sm-12 col-xs-12">
@@ -265,15 +250,15 @@ $conn = mysqli_connect("localhost", "root", "", "lde");
                             <i class="fa fa-angle-down adminpro-icon adminpro-down-arrow"></i>
                           </a>
                           <ul role="menu" class="dropdown-header-top author-log dropdown-menu animated zoomIn">
-                            <li><a href="./register.php"><span class="fa fa-home author-log-ic"></span>Register</a>
+                            <li><a href="register.php"><span class="fa fa-home author-log-ic"></span>Register</a>
                             </li>
                             <li><a href="#"><span class="fa fa-user author-log-ic"></span>My Profile</a>
                             </li>
-                            <li><a href="./lock.php"><span class="fa fa-diamond author-log-ic"></span> Lock</a>
+                            <li><a href="lock.php"><span class="fa fa-diamond author-log-ic"></span> Lock</a>
                             </li>
                             <li><a href="#"><span class="fa fa-cog author-log-ic"></span>Settings</a>
                             </li>
-                            <li><a href="./login.php"><span class="fa fa-lock author-log-ic"></span>Log Out</a>
+                            <li><a href="login.php"><span class="fa fa-lock author-log-ic"></span>Log Out</a>
                             </li>
                           </ul>
                         </li>
@@ -669,26 +654,106 @@ $conn = mysqli_connect("localhost", "root", "", "lde");
       <hr>
       <div class="product-status mg-tb-15">
         <div class="container-fluid">
+          <div class="row">
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
               <div class="product-status-wrap">
-                <h4>Order List</h4>
+                <h4>Food List</h4>
+                <div class="btn-wrapper">
+                  <div class="center"><button data-toggle="modal" data-target="#squarespaceModal" class="btn btn-primary">Add Food</button></div>
+                  <!-- line modal -->
+                  <div class="modal fade" id="squarespaceModal" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true"></span><span class="sr-only">Close</span></button>
+                          <h3 class="modal-title" id="lineModalLabel">Add Food</h3>
+                        </div>
+                        <div class="modal-body">
 
-								<table id="tabledata" class="table table-striped table-bordered">
-								<thead>
-								    <tr>
-											<td> Order Name</td>
-								      <td>Business Name</td>
-								      <td>Quantity</td>
-											<td> Price</td>
-								      <td>Size</td>
-								    </tr>
-								</thead>
-							</table>
+                          <!-- content goes here -->
+                          <form action="insertproduct.php" method="post">
+                            <div class="form-group">
+                              <label>Business</label>
+                              <input type="text" name="business" id="business" class="form-control" placeholder="Enter name of business">
+                            </div>
+                            <div class="form-group">
+                              <label>Product Name</label>
+                              <input type="text" class="form-control" id="productname" name="productname" placeholder="Enter product name">
+                            </div>
+                            <div class="form-group">
+                              <label>Price</label>
+                              <input type="number" class="form-control" id="price" name="price" placeholder="Enter product price">
+                            </div>
+                            <!-- <div class="form-group">
+                            <label for="exampleInputFile">File input</label>
+                            <input type="file" id="exampleInputFile">
+                            <p class="help-block">Example block-level help text here.</p>
+                          </div>
+                          <div class="checkbox">
+                            <label>
+                              <input type="checkbox"> Check me out
+                            </label>
+                          </div> -->
+                            <!-- <button type="submit" class="btn btn-default">Submit</button> -->
+
+
+                        </div>
+                        <div class="modal-footer">
+                          <div class="btn-group btn-group-justified" role="group" aria-label="group button">
+                            <div class="btn-group" role="group">
+                              <button type="button" class="btn btn-default" data-dismiss="modal" role="button">Close</button>
+                            </div>
+                            <div class="btn-group btn-delete hidden" role="group">
+                              <button type="button" id="delImage" class="btn btn-default btn-hover-red" data-dismiss="modal" role="button">Delete</button>
+                            </div>
+                            <div class="btn-group" role="group">
+                              <button type="submit" name="insert" class="btn btn-default btn-hover-green">Save</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </form>
+                  <!-- line modal -->
+                  <div class="container-fluid">
+                  <div class="table-responsive">
+                  <table id="tabledata" class="table table-striped table-bordered">
+                  <thead>
+                      <tr>
+                        <td>ID</th>
+                        <td>Name of Restaurant</td>
+                        <td>Name of Food</td>
+                        <td>Date and Time</td>
+                      </tr>
+                  </thead>
+                  </table>
+                  </div>
+                </div>
+                  <!-- <table>
+                    <tr>
+                      <th>Restaurant</th>
+                      <th>Food</th>
+                      <th>Setting</th>
+                    </tr>
+                    <tr>
+                      <td>Kick</td>
+                      <td></td>
+                      <td>
+                        <button data-toggle="modal" data-target="#edit-business" title="Edit" class="pd-setting-ed"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></button>
+                        <button data-toggle="tooltip" title="Trash" class="pd-setting-ed"><i class="fa fa-trash-o" aria-hidden="true"></i></button>
+                      </td>
+                    </tr>
+                  </table> -->
+                </div>
               </div>
             </div>
+          </div>
         </div>
       </div>
+
       <!-- FOOTER STARTS HERE -->
+
       <div class="footer-copyright-area">
         <div class="container-fluid">
           <div class="row">
@@ -700,95 +765,78 @@ $conn = mysqli_connect("localhost", "root", "", "lde");
           </div>
         </div>
       </div>
-    </div>
 
-		<!-- jquery
-			============================================ -->
+      <!-- jquery
+  		============================================ -->
 
-		<!-- wow JS
-			============================================ -->
-		<script src="js/wow.min.js"></script>
-		<!-- price-slider JS
-			============================================ -->
-		<script src="js/jquery-price-slider.js"></script>
-		<!-- meanmenu JS
-			============================================ -->
-		<script src="js/jquery.meanmenu.js"></script>
-		<!-- owl.carousel JS
-			============================================ -->
-		<script src="js/owl.carousel.min.js"></script>
-		<!-- sticky JS
-			============================================ -->
-		<script src="js/jquery.sticky.js"></script>
-		<!-- scrollUp JS
-			============================================ -->
-		<script src="js/jquery.scrollUp.min.js"></script>
-		<!-- mCustomScrollbar JS
-			============================================ -->
-		<script src="js/scrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
-		<script src="js/scrollbar/mCustomScrollbar-active.js"></script>
-		<!-- metisMenu JS
-			============================================ -->
-		<script src="js/metisMenu/metisMenu.min.js"></script>
-		<script src="js/metisMenu/metisMenu-active.js"></script>
-		<!-- morrisjs JS
-			============================================ -->
-		<script src="js/morrisjs/raphael-min.js"></script>
-		<script src="js/morrisjs/morris.js"></script>
-		<script src="js/morrisjs/morris-active.js"></script>
-		<!-- morrisjs JS
-			============================================ -->
-		<script src="js/sparkline/jquery.sparkline.min.js"></script>
-		<script src="js/sparkline/jquery.charts-sparkline.js"></script>
-		<!-- calendar JS
-			============================================ -->
-		<script src="js/calendar/moment.min.js"></script>
-		<script src="js/calendar/fullcalendar.min.js"></script>
-		<script src="js/calendar/fullcalendar-active.js"></script>
-		<!-- plugins JS
-			============================================ -->
-		<script src="js/plugins.js"></script>
-		<!-- main JS
-			============================================ -->
-			  <script src="js/main.js"></script>
-		<script type="text/javascript" >
-		$(document).ready(function(){
-				$('#tabledata').DataTable({
-					"ajax" :
-					{
-					"url" : "./php/datatableOrders.php",
-					"dataSrc" : "",
-				},
-				"columns" : [
-					{"data" : "productname"},
-					{"data" : "business"},
-					{"data" : "quantity"},
-					{"data" : "price"},
-					{"data" : "size"}
-				]
+      <!-- bootstrap JS
+  		============================================ -->
+      <script src="js/bootstrap.min.js"></script>
+      <!-- wow JS
+  		============================================ -->
+      <script src="js/wow.min.js"></script>
+      <!-- price-slider JS
+  		============================================ -->
+      <script src="js/jquery-price-slider.js"></script>
+      <!-- meanmenu JS
+  		============================================ -->
+      <script src="js/jquery.meanmenu.js"></script>
+      <!-- owl.carousel JS
+  		============================================ -->
+      <script src="js/owl.carousel.min.js"></script>
+      <!-- sticky JS
+  		============================================ -->
+      <script src="js/jquery.sticky.js"></script>
+      <!-- scrollUp JS
+  		============================================ -->
+      <script src="js/jquery.scrollUp.min.js"></script>
+      <!-- mCustomScrollbar JS
+  		============================================ -->
+      <script src="js/scrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+      <script src="js/scrollbar/mCustomScrollbar-active.js"></script>
+      <!-- metisMenu JS
+  		============================================ -->
+      <script src="js/metisMenu/metisMenu.min.js"></script>
+      <script src="js/metisMenu/metisMenu-active.js"></script>
+      <!-- morrisjs JS
+  		============================================ -->
+      <script src="js/morrisjs/raphael-min.js"></script>
+      <script src="js/morrisjs/morris.js"></script>
+      <script src="js/morrisjs/morris-active.js"></script>
+      <!-- morrisjs JS
+  		============================================ -->
+      <script src="js/sparkline/jquery.sparkline.min.js"></script>
+      <script src="js/sparkline/jquery.charts-sparkline.js"></script>
+      <!-- calendar JS
+  		============================================ -->
+      <script src="js/calendar/moment.min.js"></script>
+      <script src="js/calendar/fullcalendar.min.js"></script>
+      <script src="js/calendar/fullcalendar-active.js"></script>
+      <!-- plugins JS
+  		============================================ -->
+      <script src="js/plugins.js"></script>
+      <!-- main JS
+  		============================================ -->
+      <script src="js/main.js"></script>
+      <script type="text/javascript" >
+      $(document).ready(function(){
+      $('#tabledata').DataTable({
+      "ajax" :
+      {
+      "url" : "./php/datatableFood.php",
+      "dataSrc" : "",
+      },
+      "columns" : [
+      {"data" : "id"},
+      {"data" : "restaurant"},
+      {"data" : "foodname"},
+      {"data" : "da&time"}
 
-				});
-		});
-		</script>
-		<!-- <script>
-		$(document).on('click', '.btn_delete', function(){
-		           var id=$(this).data("id3");
-		           if(confirm("Are you sure you want to delete this?"))
-		           {
-		                $.ajax({
-		                     url:"delete.php",
-		                     method:"POST",
-		                     data:{id:id},
-		                     dataType:"text",
-		                     success:function(data){
-		                          alert(data);
-		                          fetch_data();
-		                     }
-		                });
-		           }
-		      });
-		 });
-		 </script> -->
+      ]
+
+      });
+      });
+      </script>
 </body>
 
 </html>

@@ -28,5 +28,5 @@ else{
 echo 'inserted';
 }
 }
-// header("location:menu.html")
+header("location:../menu.php");
 ?>

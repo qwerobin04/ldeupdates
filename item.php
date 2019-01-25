@@ -11,13 +11,8 @@
           type: 'POST',
           data: {product_name:product_name, quantity:quantity, product_price:product_price, product_business:product_business},
           url: "shoppingcart.php",
-          success: function(result){
-            alert(result);
-          }
         })
-
       })
-
     });
 
 </script>
@@ -46,7 +41,7 @@ $connect = mysqli_connect("localhost", "root", "", "lde");
 					{
 				?>
 			<div class="col-md-4">
-				<form method="post">
+				<form method="post" action="shoppingcart.php?action=add&id=<?php echo $row["id"]; ?>">
 					<div style="border:1px solid #333; background-color:#f1f1f1; border-radius:5px; padding:16px;" align="center">
 						<img src="Practice/<?php echo $row["image"]; ?>" class="img-responsive" /><br />
 
@@ -56,6 +51,7 @@ $connect = mysqli_connect("localhost", "root", "", "lde");
 
 						<input type="text" id = "quantity" name="quantity" value="1" class="form-control" />
 
+            <input type="hidden" name="id" value="<?php echo $row["id"]; ?>" />
             <input type="hidden" id = "product_business" name="product_business" value="<?php echo $row["business"]; ?>" />
 
 						<input type="hidden" id = "product_name" name="product_name" value="<?php echo $row["productname"]; ?>" />
@@ -70,5 +66,4 @@ $connect = mysqli_connect("localhost", "root", "", "lde");
 			<?php
 					}
 				}
-include("shoppingcart.php");
 			?>

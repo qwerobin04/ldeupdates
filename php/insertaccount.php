@@ -16,17 +16,14 @@ if ($conn->connect_error) {
 // $lname = $_POST['lastname'];
 // $Age = $_POST['age'];
 
-$fullname = $_POST['fullname'];
+$name = $_POST['name'];
 $username = $_POST['username'];
-$business = $_POST['business'];
-$businesslocation = $_POST['businesslocation'];
+$address = $_POST['address'];
+$contactnumber = $_POST['contactnumber'];
 $password = $_POST['password'];
-$emailaddress = $_POST['emailaddress'];
-//
-// $today = date("Y-m-d H:i:s");
-
-$sql = "INSERT INTO business (fullname, username, business, businesslocation, password, emailaddress )
-VALUES ('{$fullname}', '{$username}', '{$business}', '{$businesslocation}', '{$password}', '{$emailaddress}')";
+$passwordmd5 = md5($password);
+$sql = "INSERT INTO user (name, username, address, contactnumber, password)
+VALUES ('{$name}', '{$username}', '{$address}', '{$contactnumber}', '{$passwordmd5}')";
 if(!mysqli_query($conn, $sql)){
 echo 'not inserted';
 }
@@ -34,5 +31,5 @@ else{
 echo 'inserted';
 }
 }
-header("location:business.html")
+header("location:../accounts.php");
 ?>

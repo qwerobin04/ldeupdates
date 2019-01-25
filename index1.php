@@ -1,20 +1,8 @@
-<?php
-$conn = mysqli_connect("localhost", "root", "", "lde");
-	$sql =  "SELECT * FROM cartadded ORDER BY ID ASC";
-	$run = mysqli_query($conn,$sql);
-?>
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
+
+<!doctype html>
+<html class="no-js" lang="en">
 
 <head>
-
-			 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
-			 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
-			 <script src="https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js"></script>
-			 <script src="https://cdn.datatables.net/1.10.12/js/dataTables.bootstrap.min.js"></script>
-			 <link rel="stylesheet" href="https://cdn.datatables.net/1.10.12/css/dataTables.bootstrap.min.css" />
-
-
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   <title>Lokal Dashboard</title>
@@ -78,19 +66,19 @@ $conn = mysqli_connect("localhost", "root", "", "lde");
   <div class="left-sidebar-pro">
     <nav id="sidebar" class="">
       <div class="sidebar-header">
-        <a href="./index1.php"><img class="main-logo" src="" alt="" /></a>
+        <a href="./index.php"><img class="main-logo" src="" alt="" /></a>
         <strong><img src="" alt="" /></strong>
       </div>
       <div class="left-custom-menu-adp-wrap comment-scrollbar">
         <nav class="sidebar-nav left-sidebar-menu-pro">
           <ul class="metismenu" id="menu1">
             <li class="active">
-              <a class="has-arrow" href="./index1.php">
+              <a class="has-arrow" href="./index.php">
                 <i class="fa big-icon fa-home icon-wrap"></i>
                 <span class="mini-click-non">Main</span>
               </a>
               <ul class="submenu-angle" aria-expanded="true">
-                <li><a title="Dashboard v.1" href="./index1.php"><i class="fa fa-bullseye sub-icon-mg" aria-hidden="true"></i> <span class="mini-sub-pro">Dashboard</span></a></li>
+                <li><a title="Dashboard v.1" href="./index.php"><i class="fa fa-bullseye sub-icon-mg" aria-hidden="true"></i> <span class="mini-sub-pro">Dashboard</span></a></li>
                 <li><a title="Order List" href="./orders.php"><i class="fa fa-female sub-icon-mg" aria-hidden="true"></i> <span class="mini-sub-pro">Orders</span></a></li>
                 <li><a title="Business List" href="./business.php"><i class="fa fa-bolt sub-icon-mg" aria-hidden="true"></i> <span class="mini-sub-pro">Business</span></a></li>
                 <li><a title="Account List" href="./accounts.php"><i class="fa fa-line-chart sub-icon-mg" aria-hidden="true"></i> <span class="mini-sub-pro">Accounts</span></a></li>
@@ -110,7 +98,7 @@ $conn = mysqli_connect("localhost", "root", "", "lde");
       <div class="row">
         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
           <div class="logo-pro">
-            <a href="./index1.php"><img class="main-logo" src="" alt="" /></a>
+            <a href="./index.php"><img class="main-logo" src="" alt="" /></a>
           </div>
         </div>
       </div>
@@ -131,7 +119,7 @@ $conn = mysqli_connect("localhost", "root", "", "lde");
                   </div>
                   <div class="col-lg-6 col-md-7 col-sm-6 col-xs-12">
                     <div class="header-top-menu tabl-d-n">
-                      <h2>Lokal Delivery Express</h2>
+                      <h2 class="lokal-title">Lokal Delivery Express</h2>
                     </div>
                   </div>
                   <div class="col-lg-5 col-md-5 col-sm-12 col-xs-12">
@@ -265,8 +253,6 @@ $conn = mysqli_connect("localhost", "root", "", "lde");
                             <i class="fa fa-angle-down adminpro-icon adminpro-down-arrow"></i>
                           </a>
                           <ul role="menu" class="dropdown-header-top author-log dropdown-menu animated zoomIn">
-                            <li><a href="./register.php"><span class="fa fa-home author-log-ic"></span>Register</a>
-                            </li>
                             <li><a href="#"><span class="fa fa-user author-log-ic"></span>My Profile</a>
                             </li>
                             <li><a href="./lock.php"><span class="fa fa-diamond author-log-ic"></span> Lock</a>
@@ -666,35 +652,402 @@ $conn = mysqli_connect("localhost", "root", "", "lde");
           </div>
         </div>
       </div>
-      <hr>
-      <div class="product-status mg-tb-15">
-        <div class="container-fluid">
+      <!-- Mobile Menu start -->
+      <div class="mobile-menu-area">
+        <div class="container">
+          <div class="row">
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-              <div class="product-status-wrap">
-                <h4>Order List</h4>
-
-								<table id="tabledata" class="table table-striped table-bordered">
-								<thead>
-								    <tr>
-											<td> Order Name</td>
-								      <td>Business Name</td>
-								      <td>Quantity</td>
-											<td> Price</td>
-								      <td>Size</td>
-								    </tr>
-								</thead>
-							</table>
+              <div class="mobile-menu">
+                <nav id="dropdown">
+                  <ul class="mobile-menu-nav">
+                    <li><a data-toggle="collapse" data-target="#Charts" href="#">Home <span class="admin-project-icon adminpro-icon adminpro-down-arrow"></span></a>
+                      <ul class="collapse dropdown-header-top">
+                        <li><a href="./index.php">Dashboard</a></li>
+                        <li><a href="./orders.php">Orders</a></li>
+                        <li><a href="./business.php">Business</a></li>
+                        <li><a href="./accounts.php">Accounts</a></li>
+                        <li><a href="./items.php">Items</a></li>
+                      </ul>
+                    </li>
+                  </ul>
+                </nav>
               </div>
             </div>
+          </div>
         </div>
       </div>
-      <!-- FOOTER STARTS HERE -->
-      <div class="footer-copyright-area">
+      <!-- Mobile Menu end -->
+      <hr>
+      <div class="breadcome-area">
         <div class="container-fluid">
           <div class="row">
-            <div class="col-lg-12">
-              <div class="footer-copy-right">
-                <p>Copyright &copy; 2018 <a href="https://colorlib.com/wp/templates/"><b>Lokal Delivery Express</b></a> All rights reserved.</p>
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+              <div class="breadcome-list">
+                <div class="row">
+                  <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                    <div class="breadcome-heading">
+                      <form role="search" class="">
+                        <input type="text" placeholder="Search..." class="form-control">
+                        <a href=""><i class="fa fa-search"></i></a>
+                      </form>
+                    </div>
+                  </div>
+                  <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                    <ul class="breadcome-menu">
+                      <li><a href="#">Home</a> <span class="bread-slash">/</span>
+                      </li>
+                      <li><span class="bread-blod">Dashboard</span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="section-admin container-fluid">
+            <div class="row admin text-center">
+              <div class="col-md-12">
+                <div class="row">
+                  <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                    <div class="admin-content analysis-progrebar-ctn res-mg-t-15">
+                      <h4 class="text-left text-uppercase"><b>Orders</b></h4>
+                      <div class="row vertical-center-box vertical-center-box-tablet">
+                        <div class="col-xs-3 mar-bot-15 text-left">
+                          <label class="label bg-green">78% <i class="fa fa-level-up" aria-hidden="true"></i></label>
+                        </div>
+                        <div class="col-xs-9 cus-gh-hd-pro">
+                          <h2 class="text-right no-margin">50</h2>
+                        </div>
+                      </div>
+                      <div class="progress progress-mini">
+                        <div style="width: 78%;" class="progress-bar bg-green"></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12" style="margin-bottom:1px;">
+                    <div class="admin-content analysis-progrebar-ctn res-mg-t-30">
+                      <h4 class="text-left text-uppercase"><b>Partner Company</b></h4>
+                      <div class="row vertical-center-box vertical-center-box-tablet">
+                        <div class="text-left col-xs-3 mar-bot-15">
+                          <label class="label bg-red">30% <i class="fa fa-level-down" aria-hidden="true"></i></label>
+                        </div>
+                        <div class="col-xs-9 cus-gh-hd-pro">
+                          <h2 class="text-right no-margin">32</h2>
+                        </div>
+                      </div>
+                      <div class="progress progress-mini">
+                        <div style="width: 38%;" class="progress-bar progress-bar-danger bg-red"></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                    <div class="admin-content analysis-progrebar-ctn res-mg-t-30">
+                      <h4 class="text-left text-uppercase"><b>Revenue</b></h4>
+                      <div class="row vertical-center-box vertical-center-box-tablet">
+                        <div class="text-left col-xs-3 mar-bot-15">
+                          <label class="label bg-blue">58% <i class="fa fa-level-up" aria-hidden="true"></i></label>
+                        </div>
+                        <div class="col-xs-9 cus-gh-hd-pro">
+                          <h2 class="text-right no-margin">0</h2>
+                        </div>
+                      </div>
+                      <div class="progress progress-mini">
+                        <div style="width: 60%;" class="progress-bar bg-blue"></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                    <div class="admin-content analysis-progrebar-ctn res-mg-t-30">
+                      <h4 class="text-left text-uppercase"><b>Yearly Sales</b></h4>
+                      <div class="row vertical-center-box vertical-center-box-tablet">
+                        <div class="text-left col-xs-3 mar-bot-15">
+                          <label class="label bg-purple">70% <i class="fa fa-level-up" aria-hidden="true"></i></label>
+                        </div>
+                        <div class="col-xs-9 cus-gh-hd-pro">
+                          <h2 class="text-right no-margin">Php100,000</h2>
+                        </div>
+                      </div>
+                      <div class="progress progress-mini">
+                        <div style="width: 60%;" class="progress-bar bg-purple"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="product-sales-area mg-tb-30">
+            <div class="container-fluid">
+              <div class="row">
+                <div class="col-lg-9 col-md-9 col-sm-9 col-xs-12">
+                  <div class="product-sales-chart">
+                    <div class="portlet-title">
+                      <div class="row">
+                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                          <div class="caption pro-sl-hd">
+                            <span class="caption-subject text-uppercase"><b>Partner Restaurant Sales</b></span>
+                          </div>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                          <div class="actions graph-rp">
+                            <div class="btn-group" data-toggle="buttons">
+                              <label class="btn btn-grey active">
+                                <input type="radio" name="options" class="toggle" id="option1" checked="">Today</label>
+                              <label class="btn btn-grey">
+                                <input type="radio" name="options" class="toggle" id="option2">Week</label>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <ul class="list-inline cus-product-sl-rp">
+                      <li>
+                        <h5><i class="fa fa-circle" style="color: #24caa1;"></i>KICK</h5>
+                      </li>
+                      <li>
+                        <h5><i class="fa fa-circle" style="color: #00b5c2;"></i>CARAMEL</h5>
+                      </li>
+                      <li>
+                        <h5><i class="fa fa-circle" style="color: #ff7f5a;"></i>EARLS</h5>
+                      </li>
+                    </ul>
+                    <div id="morris-area-chart" style="height: 356px;"></div>
+                  </div>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                  <div class="white-box analytics-info-cs mg-b-10 res-mg-t-30">
+                    <h3 class="box-title">Total Visit</h3>
+                    <ul class="list-inline two-part-sp">
+                      <li>
+                        <div id="sparklinedash"></div>
+                      </li>
+                      <li class="text-right sp-cn-r"><i class="fa fa-level-up" aria-hidden="true"></i> <span class="counter text-success">8659</span></li>
+                    </ul>
+                  </div>
+                  <div class="white-box analytics-info-cs mg-b-10">
+                    <h3 class="box-title">Total Page Views</h3>
+                    <ul class="list-inline two-part-sp">
+                      <li>
+                        <div id="sparklinedash2"></div>
+                      </li>
+                      <li class="text-right"><i class="fa fa-level-up" aria-hidden="true"></i> <span class="counter text-purple">7469</span></li>
+                    </ul>
+                  </div>
+                  <div class="white-box analytics-info-cs mg-b-10">
+                    <h3 class="box-title">Unique Visitor</h3>
+                    <ul class="list-inline two-part-sp">
+                      <li>
+                        <div id="sparklinedash3"></div>
+                      </li>
+                      <li class="text-right"><i class="fa fa-level-up" aria-hidden="true"></i> <span class="counter text-info">6011</span></li>
+                    </ul>
+                  </div>
+                  <div class="white-box analytics-info-cs">
+                    <h3 class="box-title">Bounce Rate</h3>
+                    <ul class="list-inline two-part-sp">
+                      <li>
+                        <div id="sparklinedash4"></div>
+                      </li>
+                      <li class="text-right"><i class="fa fa-level-down" aria-hidden="true"></i> <span class="text-danger">0%</span></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="traffic-analysis-area">
+            <div class="container-fluid">
+              <div class="row">
+                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                  <div class="white-box tranffic-als-inner">
+                    <h3 class="box-title"><small class="pull-right m-t-10 text-success"><i class="fa fa-sort-asc"></i> 0% last month</small> Site Traffic</h3>
+                    <div class="stats-row">
+                      <div class="stat-item">
+                        <h6>Overall Growth</h6>
+                        <b>0%</b>
+                      </div>
+                      <div class="stat-item">
+                        <h6>Montly</h6>
+                        <b>0%</b>
+                      </div>
+                      <div class="stat-item">
+                        <h6>Day</h6>
+                        <b>0%</b>
+                      </div>
+                    </div>
+                    <div id="sparkline8"></div>
+                  </div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                  <div class="white-box tranffic-als-inner res-mg-t-30">
+                    <h3 class="box-title"><small class="pull-right m-t-10 text-danger"><i class="fa fa-sort-desc"></i> 0% last month</small>Site Traffic</h3>
+                    <div class="stats-row">
+                      <div class="stat-item">
+                        <h6>Overall Growth</h6>
+                        <b>0%</b>
+                      </div>
+                      <div class="stat-item">
+                        <h6>Montly</h6>
+                        <b>0%</b>
+                      </div>
+                      <div class="stat-item">
+                        <h6>Day</h6>
+                        <b>0%</b>
+                      </div>
+                    </div>
+                    <div id="sparkline9"></div>
+                  </div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                  <div class="white-box tranffic-als-inner res-mg-t-30">
+                    <h3 class="box-title"><small class="pull-right m-t-10 text-success"><i class="fa fa-sort-asc"></i> 0% last month</small>Site Traffic</h3>
+                    <div class="stats-row">
+                      <div class="stat-item">
+                        <h6>Overall Growth</h6>
+                        <b>0%</b>
+                      </div>
+                      <div class="stat-item">
+                        <h6>Montly</h6>
+                        <b>0%</b>
+                      </div>
+                      <div class="stat-item">
+                        <h6>Day</h6>
+                        <b>0%</b>
+                      </div>
+                    </div>
+                    <div id="sparkline10"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="product-new-list-area">
+            <div class="container-fluid">
+              <div class="row">
+                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                  <div class="single-new-trend mg-t-30">
+                    <a href="#"><img src="img/new-product/5.jpg" alt=""></a>
+                    <div class="overlay-content">
+                      <a href="#">
+                        <h2>Php0</h2>
+                      </a>
+                      <a href="#" class="btn-small">Now</a>
+                      <div class="product-action">
+                        <ul>
+                          <li>
+                            <a data-toggle="tooltip" title="Shopping" href="#"><i class="fa fa-shopping-bag" aria-hidden="true"></i></a>
+                          </li>
+                          <li>
+                            <a data-toggle="tooltip" title="Quick view" href="#"><i class="fa fa-heart" aria-hidden="true"></i></a>
+                          </li>
+                        </ul>
+                      </div>
+                      <a href="#">
+                        <h4>Item Name</h4>
+                      </a>
+                      <div class="pro-rating">
+                        <i class="fa fa-star color"></i>
+                        <i class="fa fa-star color"></i>
+                        <i class="fa fa-star color"></i>
+                        <i class="fa fa-star color"></i>
+                        <i class="fa fa-star"></i>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                  <div class="single-new-trend mg-t-30">
+                    <a href="#"><img src="img/new-product/6.jpg" alt=""></a>
+                    <div class="overlay-content">
+                      <a href="#">
+                        <h2>Php0</h2>
+                      </a>
+                      <a href="#" class="btn-small">Now</a>
+                      <div class="product-action">
+                        <ul>
+                          <li>
+                            <a data-toggle="tooltip" title="Shopping" href="#"><i class="fa fa-shopping-bag" aria-hidden="true"></i></a>
+                          </li>
+                          <li>
+                            <a data-toggle="tooltip" title="Quick view" href="#"><i class="fa fa-heart" aria-hidden="true"></i></a>
+                          </li>
+                        </ul>
+                      </div>
+                      <a href="#">
+                        <h4>Item Name</h4>
+                      </a>
+                      <div class="pro-rating">
+                        <i class="fa fa-star color"></i>
+                        <i class="fa fa-star color"></i>
+                        <i class="fa fa-star color"></i>
+                        <i class="fa fa-star color"></i>
+                        <i class="fa fa-star"></i>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                  <div class="single-new-trend mg-t-30">
+                    <a href="#"><img src="img/new-product/7.jpg" alt=""></a>
+                    <div class="overlay-content">
+                      <a href="#">
+                        <h2>Php0</h2>
+                      </a>
+                      <a href="#" class="btn-small">Now</a>
+                      <div class="product-action">
+                        <ul>
+                          <li>
+                            <a data-toggle="tooltip" title="Shopping" href="#"><i class="fa fa-shopping-bag" aria-hidden="true"></i></a>
+                          </li>
+                          <li>
+                            <a data-toggle="tooltip" title="Quick view" href="#"><i class="fa fa-heart" aria-hidden="true"></i></a>
+                          </li>
+                        </ul>
+                      </div>
+                      <a href="#">
+                        <h4>Item Name</h4>
+                      </a>
+                      <div class="pro-rating">
+                        <i class="fa fa-star color"></i>
+                        <i class="fa fa-star color"></i>
+                        <i class="fa fa-star color"></i>
+                        <i class="fa fa-star color"></i>
+                        <i class="fa fa-star"></i>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                  <div class="single-new-trend mg-t-30">
+                    <a href="#"><img src="img/new-product/5.jpg" alt=""></a>
+                    <div class="overlay-content">
+                      <a href="#">
+                        <h2>Php0</h2>
+                      </a>
+                      <a href="#" class="btn-small">Now</a>
+                      <div class="product-action">
+                        <ul>
+                          <li>
+                            <a data-toggle="tooltip" title="Shopping" href="#"><i class="fa fa-shopping-bag" aria-hidden="true"></i></a>
+                          </li>
+                          <li>
+                            <a data-toggle="tooltip" title="Quick view" href="#"><i class="fa fa-heart" aria-hidden="true"></i></a>
+                          </li>
+                        </ul>
+                      </div>
+                      <a href="#">
+                        <h4>Item Name</h4>
+                      </a>
+                      <div class="pro-rating">
+                        <i class="fa fa-star color"></i>
+                        <i class="fa fa-star color"></i>
+                        <i class="fa fa-star color"></i>
+                        <i class="fa fa-star color"></i>
+                        <i class="fa fa-star"></i>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -702,93 +1055,71 @@ $conn = mysqli_connect("localhost", "root", "", "lde");
       </div>
     </div>
 
-		<!-- jquery
-			============================================ -->
+    <div class="footer-copyright-area">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="footer-copy-right">
+              <p>Copyright &copy; 2018 <a href="https://colorlib.com/wp/templates/"><b>Lokal Delivery Express</b></a> All rights reserved.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
-		<!-- wow JS
-			============================================ -->
-		<script src="js/wow.min.js"></script>
-		<!-- price-slider JS
-			============================================ -->
-		<script src="js/jquery-price-slider.js"></script>
-		<!-- meanmenu JS
-			============================================ -->
-		<script src="js/jquery.meanmenu.js"></script>
-		<!-- owl.carousel JS
-			============================================ -->
-		<script src="js/owl.carousel.min.js"></script>
-		<!-- sticky JS
-			============================================ -->
-		<script src="js/jquery.sticky.js"></script>
-		<!-- scrollUp JS
-			============================================ -->
-		<script src="js/jquery.scrollUp.min.js"></script>
-		<!-- mCustomScrollbar JS
-			============================================ -->
-		<script src="js/scrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
-		<script src="js/scrollbar/mCustomScrollbar-active.js"></script>
-		<!-- metisMenu JS
-			============================================ -->
-		<script src="js/metisMenu/metisMenu.min.js"></script>
-		<script src="js/metisMenu/metisMenu-active.js"></script>
-		<!-- morrisjs JS
-			============================================ -->
-		<script src="js/morrisjs/raphael-min.js"></script>
-		<script src="js/morrisjs/morris.js"></script>
-		<script src="js/morrisjs/morris-active.js"></script>
-		<!-- morrisjs JS
-			============================================ -->
-		<script src="js/sparkline/jquery.sparkline.min.js"></script>
-		<script src="js/sparkline/jquery.charts-sparkline.js"></script>
-		<!-- calendar JS
-			============================================ -->
-		<script src="js/calendar/moment.min.js"></script>
-		<script src="js/calendar/fullcalendar.min.js"></script>
-		<script src="js/calendar/fullcalendar-active.js"></script>
-		<!-- plugins JS
-			============================================ -->
-		<script src="js/plugins.js"></script>
-		<!-- main JS
-			============================================ -->
-			  <script src="js/main.js"></script>
-		<script type="text/javascript" >
-		$(document).ready(function(){
-				$('#tabledata').DataTable({
-					"ajax" :
-					{
-					"url" : "./php/datatableOrders.php",
-					"dataSrc" : "",
-				},
-				"columns" : [
-					{"data" : "productname"},
-					{"data" : "business"},
-					{"data" : "quantity"},
-					{"data" : "price"},
-					{"data" : "size"}
-				]
-
-				});
-		});
-		</script>
-		<!-- <script>
-		$(document).on('click', '.btn_delete', function(){
-		           var id=$(this).data("id3");
-		           if(confirm("Are you sure you want to delete this?"))
-		           {
-		                $.ajax({
-		                     url:"delete.php",
-		                     method:"POST",
-		                     data:{id:id},
-		                     dataType:"text",
-		                     success:function(data){
-		                          alert(data);
-		                          fetch_data();
-		                     }
-		                });
-		           }
-		      });
-		 });
-		 </script> -->
+  <!-- jquery
+		============================================ -->
+  <script src="js/vendor/jquery-1.11.3.min.js"></script>
+  <!-- bootstrap JS
+		============================================ -->
+  <script src="js/bootstrap.min.js"></script>
+  <!-- wow JS
+		============================================ -->
+  <script src="js/wow.min.js"></script>
+  <!-- price-slider JS
+		============================================ -->
+  <script src="js/jquery-price-slider.js"></script>
+  <!-- meanmenu JS
+		============================================ -->
+  <script src="js/jquery.meanmenu.js"></script>
+  <!-- owl.carousel JS
+		============================================ -->
+  <script src="js/owl.carousel.min.js"></script>
+  <!-- sticky JS
+		============================================ -->
+  <script src="js/jquery.sticky.js"></script>
+  <!-- scrollUp JS
+		============================================ -->
+  <script src="js/jquery.scrollUp.min.js"></script>
+  <!-- mCustomScrollbar JS
+		============================================ -->
+  <script src="js/scrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="js/scrollbar/mCustomScrollbar-active.js"></script>
+  <!-- metisMenu JS
+		============================================ -->
+  <script src="js/metisMenu/metisMenu.min.js"></script>
+  <script src="js/metisMenu/metisMenu-active.js"></script>
+  <!-- morrisjs JS
+		============================================ -->
+  <script src="js/morrisjs/raphael-min.js"></script>
+  <script src="js/morrisjs/morris.js"></script>
+  <script src="js/morrisjs/morris-active.js"></script>
+  <!-- morrisjs JS
+		============================================ -->
+  <script src="js/sparkline/jquery.sparkline.min.js"></script>
+  <script src="js/sparkline/jquery.charts-sparkline.js"></script>
+  <!-- calendar JS
+		============================================ -->
+  <script src="js/calendar/moment.min.js"></script>
+  <script src="js/calendar/fullcalendar.min.js"></script>
+  <script src="js/calendar/fullcalendar-active.js"></script>
+  <!-- plugins JS
+		============================================ -->
+  <script src="js/plugins.js"></script>
+  <!-- main JS
+		============================================ -->
+  <script src="js/main.js"></script>
 </body>
 
 </html>

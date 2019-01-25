@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -15,7 +14,30 @@
   <!-- Your custom styles (optional) -->
   <link href="css-landing/categories.css" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="css-landing/responsive.css" />
-</head>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <script src="Practice/js/jquery-3.3.1.js" type= "text/javascript"></script>
+<script>
+$(document).ready(function(e) {
+$("#search").keyup(function()
+{
+ $("#here").show();
+ var x = $(this).val();
+ $.ajax(
+   {
+     type : 'GET',
+     url : './php/search.php',
+     data : 'q='+x,
+     success : function(data)
+     {
+       $("#here").html(data);
+     }
+   }
+ )
+});
+});
+</script></head>
 
 <body>
   <div class="se-pre-con"></div>
@@ -30,9 +52,10 @@
                 alt="Nav Button Close" /> </div>
             <nav>
               <ul>
-                <li><a href="landing-page.php">Home</a></li>
-                <li><a href="restaurant.php">Restaurants </a></li>
-                <li><a href="about.php">About</a></li>
+                <li><a href="./landing-page.php">Home</a></li>
+                <li><a href="./restaurant.php">Restaurants </a></li>
+                <li><a href="./about.php">About</a></li>
+                <li><a href="./displaytheitems.php">Cart</a></li>
               </ul>
             </nav>
           </div>
@@ -57,9 +80,9 @@
       <div class="box search">
         <h2>Search by</h2>
         <div class="box-content">
-          <form action="#" method="post">
+          <form action='<?php echo $_SERVER['PHP_Self']; ?>' method="post">
             <label>Keyword</label>
-            <input type="text" class="field" />
+             <input type="search" name="search" id ="search" value="">
             <div class="inline-field">
               <label>Price</label>
               <select class="field small-field">
@@ -93,12 +116,15 @@
     <!-- End Sidebar -->
     <div class="product-new-list-area">
       <div class="container-fluid">
-        <br>
-
         <div class="row">
+          <br />
           <?php
-            include("item.php");
+            include("./price.php");
            ?>
+           <div id = "here">
+           <br>
+         </div>
+         </div>
           <!-- <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
             <div class="single-new-trend mg-t-30">
               <a href="#"><img src="img/new-product/5.jpg" alt=""></a>
@@ -298,6 +324,7 @@
     new WOW().init();
 
   </script>
+
 </body>
 
 </html>

@@ -6,7 +6,7 @@
  // Wait for window load
 $(window).load(function() {
   // Animate loader off screen
-  $(".se-pre-con").fadeOut("slow");;
+  $(".se-pre-con").fadeOut("fast");;
 
 
             function onScrollInit( items, trigger ) {
@@ -35,8 +35,6 @@ $(window).load(function() {
             onScrollInit( $('.os-animation') );
             onScrollInit( $('.staggered-animation'), $('.staggered-animation-container')
 
-
-
 );
 });
 
@@ -49,12 +47,30 @@ $(function() {
       target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
       if (target.length) {
         $('html,body').animate({
-          scrollTop: target.offset().top -110
-        }, 2500);
+          scrollTop: target.offset().top -60
+        }, 700);
         return false;
       }
     }
   });
+});
 
+/* SCROLL TO TOP */
+$(document).ready(function(){
+    $(window).scroll(function(){
+        if ($(this).scrollTop() > 200) {
+            $('#scroll').fadeIn();
+        } else {
+            $('#scroll').fadeOut();
+        }
+    });
+    $('#scroll').click(function(){
+        $("html, body").animate({ scrollTop: 0 }, 700);
+        return false;
+    });
+});
 
+/* SLICK SLIDER */
+$(document).ready(function(){
+  
 });

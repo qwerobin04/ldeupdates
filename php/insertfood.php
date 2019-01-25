@@ -1,6 +1,6 @@
 <?php
 
-if(isset($_POST['insert']))
+if(isset($_POST['insert']) && isset($_POST['restaurant']))
 {
 
 $conn = mysqli_connect("localhost", "root", "", "lde");
@@ -15,15 +15,11 @@ if ($conn->connect_error) {
 // $fname = $_POST['firstname'];
 // $lname = $_POST['lastname'];
 // $Age = $_POST['age'];
+$restaurant = $_POST['restaurant'];
+$foodname = $_POST['foodname'];
 
-$name = $_POST['name'];
-$username = $_POST['username'];
-$address = $_POST['address'];
-$contactnumber = $_POST['contactnumber'];
-$password = $_POST['password'];
-
-$sql = "INSERT INTO user (name, username, address, contactnumber, password)
-VALUES ('{$name}', '{$username}', '{$address}', '{$contactnumber}', '{$password}')";
+$sql = "INSERT INTO food (restaurant, foodname)
+VALUES ('{$restaurant}', '{$foodname}' )";
 if(!mysqli_query($conn, $sql)){
 echo 'not inserted';
 }
@@ -31,5 +27,5 @@ else{
 echo 'inserted';
 }
 }
-header("location:accounts.php")
+header("location:../food.php");
 ?>

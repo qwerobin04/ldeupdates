@@ -16,12 +16,17 @@ if ($conn->connect_error) {
 // $lname = $_POST['lastname'];
 // $Age = $_POST['age'];
 
-$productname = $_POST['product_name'];
-$quantity = $_POST['quantity'];
-$price = $_POST['product_price'];
-$total = 0;
-// $total = $total + ($_POST["quantity"] * $_POST["hidden_price"]);
-$sql = "INSERT INTO cartadded (productname, quantity, price) VALUES ('{$productname}', '{$quantity}', '{$price}')";
+$fullname = $_POST['fullname'];
+$username = $_POST['username'];
+$business = $_POST['business'];
+$businesslocation = $_POST['businesslocation'];
+$password = $_POST['password'];
+$emailaddress = $_POST['emailaddress'];
+//
+// $today = date("Y-m-d H:i:s");
+
+$sql = "INSERT INTO business (fullname, username, business, businesslocation, password, emailaddress )
+VALUES ('{$fullname}', '{$username}', '{$business}', '{$businesslocation}', '{$password}', '{$emailaddress}')";
 if(!mysqli_query($conn, $sql)){
 echo 'not inserted';
 }
@@ -29,5 +34,5 @@ else{
 echo 'inserted';
 }
 }
-// header("location:index.php")
+header("location:../business.php")
 ?>
